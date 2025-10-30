@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektni zadatak</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Roboto Condensed", sans-serif;
+            font-weight: 300;
+            color: #e0dede;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 700;
+            color: #d4b06a;
+            background-color: #2b2b2b;
+            padding: 20px 0;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-weight: 300;
+            color: #e0dede;
+            background-color: #232323;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 700px;
+            line-height: 1.6;
+            border-radius: 10px;
+            text-align: justify;
+        }
+
+        section {
+            background-color: #232323;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        section h2 {
+            color: #d4b06a;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section h3 {
+            color: #d4b06a;
+            border-bottom: 1px solid #3a3a3a;
+            padding-bottom: 5px;
+        }
+
+        section ul, section ol {
+            list-style-position: inside;
+            margin-left: 20px;
+            padding: 10px 0;
+        }
+
+        section ul li:first-child strong {
+            color: #ffda79;
+        }
+
+        .popisi {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .ul-lista, .ol-lista {
+            float: left;
+            width: 45%;
+        }
+
+        .zlatno {
+            color: #d4b06a;
+            font-weight: 500;
+        }
+
+        sub, sup {
+            font-size: 0.85em;
+            color: #d4b06a;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 250px; 
+            height: auto;
+        }
+
+        /* Animirani tekst s efektom valova */
+        .valovi {
+            font-weight: 700;
+            font-size: 2em;
+            color: transparent;
+            background: linear-gradient(90deg, #000 0%, #d4b06a 50%, #000 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: valoviAnimacija 3s linear infinite;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        @keyframes valoviAnimacija {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MMK Druga Zadaća - Gabrijela Ivkić</h1>
+
+    <p>
+        Dobrodošli na moju HTML i CSS vježbu!  
+        Ova stranica prikazuje osnovne elemente semantičke strukture,  
+        kao i korištenje različitih fontova, u ovom slučaju je korišten font Roboto Condensed sa Google Fonts.
+    </p>
+
+    <section>
+        <h2>Popis elemenata korištenih u projektu</h2>
+
+        <p>
+            U ovoj vježbi koristila sam razne HTML i CSS elemente.  
+            <strong>HTML</strong> struktura omogućuje semantičko označavanje, dok  
+            <em>CSS</em> definira izgled i raspored elemenata na stranici.  
+            Neki važni elementi prikazani su u nastavku.
+        </p>
+
+        <div class="popisi">
+            <div class="ul-lista">
+                <h3>Nenumerirani popis</h3>
+                <ul>
+                    <li>Semantičke oznake (<strong>header</strong>, <strong>footer</strong>, <strong>section</strong>)</li>
+                    <li>Tipografija pomoću <em>Google Fonts</em></li>
+                    <li>Prilagođene boje i <span class="zlatno">naglašeni elementi</span></li>
+                </ul>
+            </div>
+
+            <div class="ol-lista">
+                <h3>Numerirani popis</h3>
+                <ol>
+                    <li>Kreiranje osnovne strukture dokumenta</li>
+                    <li>Dodavanje fonta <em>Roboto Condensed</em></li>
+                    <li>Stiliziranje pomoću CSS svojstava</li>
+                </ol>
+            </div>
+        </div>
+
+        <p>
+            U tipografiji, <sup>gornji</sup> indeks je tekst podignut iznad linije,  
+            dok je <sub>donji</sub> indeks spušten ispod nje.
+        </p>
+    </section>
+
+    <h2 class="valovi">HVALA NA VAŠEM VREMENU!</h2>
+
+    <footer>
+        <img src="./gif.gif" alt="Retro gif animacija">
+    </footer>
+</body>
+</html>
