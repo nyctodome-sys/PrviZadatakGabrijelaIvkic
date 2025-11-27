@@ -236,7 +236,7 @@
 </head>
 
 <body>
-    <h1>MMK Druga Zadaća - Gabrijela Ivkić</h1>
+    <h1>MMK Peta Zadaća - Gabrijela Ivkić</h1>
 
     <p>
         Dobrodošli na moju HTML i CSS vježbu!  
@@ -309,3 +309,4 @@
     </footer>
 </body>
 </html>
+
