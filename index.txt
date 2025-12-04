@@ -668,7 +668,7 @@
 </head>
 
 <body>
-    <h1>MMK Šesta Zadaća - Gabrijela Ivkić</h1>
+    <h1>MMK Treća Zadaća - Gabrijela Ivkić</h1>
 
     <p>
         Dobrodošli na moju HTML i CSS vježbu!  
