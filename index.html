@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
-        /* Postojeći CSS kod ostaje isti */
+        
         body {
             font-family: "Roboto Condensed", sans-serif;
             font-weight: 300;
@@ -271,7 +271,7 @@
             font-style: italic;
         }
 
-        /* NOVI CSS ZA CSS VJEŠTINE */
+        
         .css-toolbox {
             display: flex;
             flex-wrap: wrap;
@@ -439,7 +439,7 @@
             margin-top: 10px;
         }
 
-        /* NOVI CSS ZA RESPONZIVNE MULTIMEDIJE */
+        
         .multimedia-container {
             background-color: #1c1c1c;
             padding: 20px;
@@ -543,7 +543,7 @@
             border: 1px solid rgba(255, 215, 107, 0.2);
         }
 
-        /* MEDIA QUERIES - RESPONZIVNI DIZAJN */
+        
         @media screen and (max-width: 1200px) {
             .media-gallery {
                 grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -629,7 +629,7 @@
             }
         }
 
-        /* POSEBNE ANIMACIJE ZA RESPONZIVNOST */
+        
         .screen-size-indicator {
             background-color: #2a1f0f;
             padding: 10px 15px;
@@ -655,7 +655,7 @@
             font-weight: 500;
         }
 
-        /* ANIMACIJA ZA MEDIA ITEM */
+        
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -794,7 +794,7 @@
         </div>
     </section>
 
-    <!-- NOVI SECTION ZA CSS VJEŠTINE -->
+    
     <section id="css-skills">
         <h2>CSS Vještine i Selektori</h2>
         
@@ -972,7 +972,7 @@
         </div>
     </section>
 
-    <!-- NOVI SECTION ZA RESPONZIVNE MULTIMEDIJE -->
+    
     <section id="responsive-media">
         <h2>Responzivni Multimedijski Sadržaj</h2>
         
@@ -1146,7 +1146,7 @@
             }, 2000);
         });
 
-        // NOVI JS ZA CSS ALATE
+        
         document.addEventListener('DOMContentLoaded', function() {
             const tools = document.querySelectorAll('.css-tool');
             const details = document.querySelectorAll('.tool-details');
@@ -1155,19 +1155,19 @@
                 tool.addEventListener('click', function() {
                     const toolType = this.getAttribute('data-tool');
                     
-                    // Ukloni aktivnu klasu sa svih alata
+                    
                     tools.forEach(t => t.classList.remove('active'));
-                    // Sakrij sve detalje
+                    
                     details.forEach(d => d.classList.remove('active'));
                     
-                    // Dodaj aktivnu klasu na kliknuti alat
+                    
                     this.classList.add('active');
-                    // Prikaži odgovarajući detalj
+                    
                     document.getElementById(`${toolType}-details`).classList.add('active');
                 });
             });
             
-            // NOVI JS ZA RESPONZIVNOST
+            
             const sizeIndicator = document.getElementById('sizeIndicator');
             const screenWidth = document.getElementById('screenWidth');
             
@@ -1198,4 +1198,5 @@
         });
     </script>
 </body>
+
 </html>
