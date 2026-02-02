@@ -664,6 +664,404 @@
         .media-item {
             animation: slideUp 0.5s ease forwards;
         }
+
+        /* NOVI DIO: CSS Animacije i 3D Transformacije */
+        #animation-3d-section {
+            background-color: #1b1b1b;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1000px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 107, 0.2);
+            box-shadow: 0 0 40px rgba(212, 176, 106, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #animation-3d-section h2 {
+            color: #ffda79;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px #d4b06a, 0 0 30px #ffda79;
+            font-size: 2.2rem;
+        }
+
+        #animation-3d-section h3 {
+            color: #d4b06a;
+            border-bottom: 1px solid rgba(255, 215, 107, 0.3);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        #animation-3d-section p {
+            text-align: center;
+            color: #e0dede;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        #animation-3d-section code {
+            background-color: #2a2a2a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #ffda79;
+            font-family: monospace;
+        }
+
+        /* Stilovi za 3D transformacije */
+        .transform-examples {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .transform-card {
+            background-color: #252525;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 107, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .transform-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .transform-demo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            position: relative;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .transform-description h4 {
+            color: #ffda79;
+            margin: 10px 0 5px;
+        }
+
+        .transform-description p {
+            color: #b0b0b0;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        /* Specifični 3D transform demo stilovi */
+        .transform-3d-rotate {
+            background: linear-gradient(135deg, #ffda79, #d4b06a);
+            transform-style: preserve-3d;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        .transform-3d-rotate:hover {
+            transform: rotateY(180deg);
+        }
+
+        .demo-front, .demo-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .demo-front {
+            background: linear-gradient(135deg, #ffda79, #d4b06a);
+        }
+
+        .demo-back {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            transform: rotateY(180deg);
+            color: white;
+        }
+
+        .transform-3d-scale {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            transition: transform 0.5s;
+            perspective: 500px;
+        }
+
+        .transform-3d-scale:hover {
+            transform: scale3d(1.1, 1.1, 1.5) translate3d(0, -10px, 20px);
+        }
+
+        .transform-3d-perspective {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            transform: rotateX(15deg) rotateY(15deg);
+            perspective: 800px;
+            transition: perspective 1s;
+        }
+
+        .transform-3d-perspective:hover {
+            perspective: 200px;
+            transform: rotateX(25deg) rotateY(25deg);
+        }
+
+        /* Stilovi za animacije */
+        .animation-examples {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .animation-card {
+            background-color: #252525;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 107, 0.1);
+        }
+
+        .animation-description h4 {
+            color: #ffda79;
+            margin: 10px 0 5px;
+        }
+
+        .animation-description p {
+            color: #b0b0b0;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        .animation-demo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        /* Definiranje animacija pomoću @keyframes */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes colorShift {
+            0% { 
+                background: linear-gradient(135deg, #ff7676, #ffda79);
+                color: #1a1a1a;
+            }
+            25% { 
+                background: linear-gradient(135deg, #ffda79, #76ff8a);
+                color: #1a1a1a;
+            }
+            50% { 
+                background: linear-gradient(135deg, #76b5ff, #9b59b6);
+                color: white;
+            }
+            75% { 
+                background: linear-gradient(135deg, #ff76d6, #ff7676);
+                color: white;
+            }
+            100% { 
+                background: linear-gradient(135deg, #ff7676, #ffda79);
+                color: #1a1a1a;
+            }
+        }
+
+        /* Primjena animacija */
+        .spin-animation {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            animation: spin 3s linear infinite;
+        }
+
+        .bounce-animation {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            animation: bounce 1.5s ease-in-out infinite;
+            animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .color-change-animation {
+            animation: colorShift 8s infinite alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        /* Kontrole animacija */
+        .animation-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .control-panel {
+            background-color: #252525;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 300px;
+            border: 1px solid rgba(255, 215, 107, 0.1);
+        }
+
+        .control-panel h4 {
+            color: #ffda79;
+            margin-top: 0;
+        }
+
+        .control-panel ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .control-panel li {
+            color: #b0b0b0;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .control-panel li:before {
+            content: "•";
+            color: #ffda79;
+            position: absolute;
+            left: 0;
+        }
+
+        .interactive-demo {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .demo-cube {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s, perspective 1s;
+            perspective: 1000px;
+            transform: rotateX(20deg) rotateY(20deg);
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a1a1a;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-sizing: border-box;
+        }
+
+        .cube-face.front {
+            background: linear-gradient(135deg, #ffda79, #d4b06a);
+            transform: translateZ(100px);
+        }
+
+        .cube-face.back {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .cube-face.left {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube-face.right {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube-face.top {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .cube-face.bottom {
+            background: linear-gradient(135deg, #f39c12, #d35400);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .demo-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .demo-controls button {
+            background-color: transparent;
+            color: #ffda79;
+            padding: 10px 20px;
+            border: 2px solid #ffda79;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        .demo-controls button:hover {
+            background-color: #ffda79;
+            color: #1a1a1a;
+            box-shadow: 0 0 15px #ffda79;
+        }
+
+        /* Animacija za interaktivnu kocku */
+        @keyframes cubeRotate {
+            0% { transform: rotateX(0) rotateY(0); }
+            25% { transform: rotateX(90deg) rotateY(90deg); }
+            50% { transform: rotateX(180deg) rotateY(180deg); }
+            75% { transform: rotateX(270deg) rotateY(270deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        .cube-animating {
+            animation: cubeRotate 10s infinite linear;
+        }
+
+        /* Responzivnost za novi dio */
+        @media (max-width: 768px) {
+            .transform-examples,
+            .animation-examples {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .animation-controls {
+                flex-direction: column;
+            }
+            
+            .control-panel,
+            .interactive-demo {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -1126,6 +1524,122 @@
         </div>
     </section>
 
+    <!-- NOVI DIO: Sekcija s CSS animacijama i 3D transformacijama -->
+    <section id="animation-3d-section">
+        <h2>CSS Animacije i 3D Transformacije</h2>
+        
+        <p>
+            Ova sekcija demonstrira korištenje CSS animacija (@keyframes) i 3D transformacija 
+            s posebnim naglaskom na svojstva poput <code>transform</code>, <code>perspective</code>, 
+            <code>backface-visibility</code> i porodicu <code>animation</code> svojstava.
+        </p>
+        
+        <div class="animation-demo-container">
+            <h3>1. 3D Transformacije</h3>
+            
+            <div class="transform-examples">
+                <div class="transform-card">
+                    <div class="transform-demo transform-3d-rotate">
+                        <div class="demo-front">3D Rotate</div>
+                        <div class="demo-back">Back Side</div>
+                    </div>
+                    <div class="transform-description">
+                        <h4>Rotate & Backface Visibility</h4>
+                        <p>Kombinacija <code>rotateY()</code> i <code>backface-visibility</code></p>
+                    </div>
+                </div>
+                
+                <div class="transform-card">
+                    <div class="transform-demo transform-3d-scale">
+                        <div class="demo-content">3D Scale</div>
+                    </div>
+                    <div class="transform-description">
+                        <h4>Scale & Translate</h4>
+                        <p><code>scale3d()</code> i <code>translate3d()</code> transformacije</p>
+                    </div>
+                </div>
+                
+                <div class="transform-card">
+                    <div class="transform-demo transform-3d-perspective">
+                        <div class="demo-content">Perspective</div>
+                    </div>
+                    <div class="transform-description">
+                        <h4>Perspective</h4>
+                        <p>Svojstvo <code>perspective</code> za 3D dubinu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>2. CSS Animacije sa @keyframes</h3>
+            
+            <div class="animation-examples">
+                <div class="animation-card">
+                    <div class="animation-demo spin-animation">
+                        <div class="demo-content">🌀</div>
+                    </div>
+                    <div class="animation-description">
+                        <h4>Spin Animacija</h4>
+                        <p>Beskonačna rotacija pomoću <code>@keyframes spin</code></p>
+                    </div>
+                </div>
+                
+                <div class="animation-card">
+                    <div class="animation-demo bounce-animation">
+                        <div class="demo-content">Bounce</div>
+                    </div>
+                    <div class="animation-description">
+                        <h4>Bounce Efekt</h4>
+                        <p>Kombinacija <code>translateY</code> i <code>timing-function</code></p>
+                    </div>
+                </div>
+                
+                <div class="animation-card">
+                    <div class="animation-demo color-change-animation">
+                        <div class="demo-content">Color Shift</div>
+                    </div>
+                    <div class="animation-description">
+                        <h4>Promjena Boja</h4>
+                        <p>Animacija boje pozadine i teksta</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>3. Kontrola Animacije</h3>
+            
+            <div class="animation-controls">
+                <div class="control-panel">
+                    <h4>Porodica animation svojstava:</h4>
+                    <ul>
+                        <li><code>animation-name</code> - definira @keyframes</li>
+                        <li><code>animation-duration</code> - trajanje animacije</li>
+                        <li><code>animation-timing-function</code> - krivulja animacije</li>
+                        <li><code>animation-delay</code> - odgoda prije početka</li>
+                        <li><code>animation-iteration-count</code> - broj ponavljanja</li>
+                        <li><code>animation-direction</code> - smjer reprodukcije</li>
+                        <li><code>animation-fill-mode</code> - stil prije/nakon animacije</li>
+                        <li><code>animation-play-state</code> - pauziraj/nastavi</li>
+                    </ul>
+                </div>
+                
+                <div class="interactive-demo">
+                    <div class="demo-cube" id="interactiveCube">
+                        <div class="cube-face front">Front</div>
+                        <div class="cube-face back">Back</div>
+                        <div class="cube-face left">Left</div>
+                        <div class="cube-face right">Right</div>
+                        <div class="cube-face top">Top</div>
+                        <div class="cube-face bottom">Bottom</div>
+                    </div>
+                    <div class="demo-controls">
+                        <button onclick="toggleAnimation()" id="toggleBtn">Pokreni Animaciju</button>
+                        <button onclick="changePerspective()" id="perspectiveBtn">Promijeni Perspektivu</button>
+                        <button onclick="resetCube()" id="resetBtn">Resetiraj</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <h2 class="valovi">HVALA NA VAŠEM VREMENU!</h2>
 
     <footer>
@@ -1196,8 +1710,49 @@
                 item.style.animationDelay = `${index * 0.1}s`;
             });
         });
+
+        // NOVI JavaScript za interaktivnu kocku
+        let isAnimating = false;
+        let cube = document.getElementById('interactiveCube');
+        let toggleBtn = document.getElementById('toggleBtn');
+        let perspectiveValue = 1000;
+
+        function toggleAnimation() {
+            if (isAnimating) {
+                cube.style.animationPlayState = 'paused';
+                cube.classList.remove('cube-animating');
+                toggleBtn.textContent = 'Pokreni Animaciju';
+            } else {
+                cube.style.animationPlayState = 'running';
+                cube.classList.add('cube-animating');
+                toggleBtn.textContent = 'Pauziraj Animaciju';
+            }
+            isAnimating = !isAnimating;
+        }
+
+        function changePerspective() {
+            perspectiveValue = perspectiveValue === 1000 ? 500 : 1000;
+            cube.style.perspective = perspectiveValue + 'px';
+            document.getElementById('perspectiveBtn').textContent = 
+                'Perspektiva: ' + perspectiveValue + 'px';
+            
+            // Dodaj vizualni feedback
+            cube.style.transition = 'perspective 0.5s';
+            setTimeout(() => {
+                cube.style.transition = '';
+            }, 500);
+        }
+
+        function resetCube() {
+            cube.classList.remove('cube-animating');
+            cube.style.animation = '';
+            cube.style.transform = 'rotateX(20deg) rotateY(20deg)';
+            cube.style.perspective = '1000px';
+            isAnimating = false;
+            toggleBtn.textContent = 'Pokreni Animaciju';
+            perspectiveValue = 1000;
+            document.getElementById('perspectiveBtn').textContent = 'Promijeni Perspektivu';
+        }
     </script>
 </body>
-
 </html>
-
